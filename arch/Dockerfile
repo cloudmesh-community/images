@@ -22,8 +22,11 @@ RUN apt-get install -y curl
 RUN apt-get install -y git-core
 RUN apt-get install -y dnsutils
 
-
-
+#
+# just for debugging
+#
+RUN git clone https://github.com/cloudmesh-community/book.git
+RUN cd book; pip install -r requirements.txt
 
 #
 # GRAPHVIZ
@@ -39,35 +42,10 @@ RUN apt-get install -y nodejs
 # PANDOC
 #
 RUN apt-get install haskell-platform -y
-
 RUN wget -q https://github.com/jgm/pandoc/releases/download/2.3.1/pandoc-2.3.1-1-amd64.deb
 RUN dpkg -i pandoc-2.3.1-1-amd64.deb
-
-
-#RUN wget -q https://github.com/jgm/pandoc/releases/download/2.3.1/pandoc-2.3.1-linux.tar.gz
-#RUN tar xvzf pandoc-2.3.1-linux.tar.gz --strip-components 1 -C /usr
-##RUN curl -sSL https://get.haskellstack.org/ | sh
-#RUN stack init
-
-
-
-#
-# PANDOC-CITEPROC
-#
-# RUN apt-get install pandoc-citeproc -y
-
-#RUN git clone https://github.com/jgm/pandoc-citeproc.git
-#RUN cd pandoc-citeproc
-#RUN stack setup
-ENV PATH "$PATH:~/.local/bin"
-#RUN stack install
-
-
-
 
 RUN pip install pandoc-fignos
 RUN npm install -g pandoc-index
 
 
-RUN git clone https://github.com/cloudmesh-community/book.git
-RUN cd book; pip install -r requirements.txt
