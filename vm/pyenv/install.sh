@@ -4,7 +4,7 @@
 
 
 wget -q https://raw.githubusercontent.com/cloudmesh-community/images/master/pyenv/bash_rc_add.sh
-curl -q -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+curl -s -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 
 #
 # this has a bug and shoudl not be executed more than once
@@ -16,8 +16,6 @@ cat bash_rc_add.sh >>  ~/.bashrc
 source ~/.bashrc
 
 pyenv update
-
-
 pyenv install 3.7.1
 pyenv install 2.7.15
 pyenv virtualenv 2.7.15 ENV2
@@ -25,5 +23,3 @@ pyenv virtualenv 3.7.1 ENV3
 
 echo "ENV3" >> ~/.bashrc
 
-source ~/.bashrc
-ENV3
