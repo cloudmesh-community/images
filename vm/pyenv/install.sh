@@ -3,6 +3,18 @@
 # yesterday, so if pyenv is already in there you can not cincatenate
 
 
+sudo apt-get update -y
+sudo apt-get install -y apt-utils
+sudo apt-get install -y build-essential libssl-dev
+sudo apt-get install -y rsync
+sudo apt-get install -y wget
+sudo apt-get install -y curl
+sudo apt-get install -y git-core
+sudo apt-get install -y dnsutils
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev
+sudo apt-get install -y libreadline-dev libsqlite3-dev llvm libncurses5-dev
+sudo apt-get install -y emacs
+
 wget -q https://raw.githubusercontent.com/cloudmesh-community/images/master/pyenv/bash_rc_add.sh
 curl -s -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 
