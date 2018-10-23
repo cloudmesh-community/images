@@ -1,26 +1,31 @@
+# Vagrant and pyenv
+
+The following commands will install pyenv with pyton 2 and 3 in
+vagrant
+
+```bash
+mkdir cloudmesh-community
+cd cloudmesh-community
+wget -q https://github.com/cloudmesh-community/images.git
+de images/vm/pyenv
+make clean
 make image
 make deploy
+```
+
+Now you can login with
+
+```bash
 make shell
-
-ENV3
-ENV2
-
-# BUG:
-
 ```
-ast 10 log lines:
-checking MACHDEP... linux2
-checking EXTRAPLATDIR... 
-checking for --without-gcc... no
-checking for --with-icc... no
-checking for gcc... no
-checking for cc... no
-checking for cl.exe... no
-configure: error: in `/tmp/python-build.20181023173958.2538/Python-2.7.15':
-configure: error: no acceptable C compiler found in $PATH
-See `config.log' for more details
-pyenv-virtualenv: `2.7.15' is not installed in pyenv.
-pyenv-virtualenv: `3.7.1' is not installed in pyenv.
-Connection to 127.0.0.1 closed.
 
-```
+Execute the command to test it. Remember that `vagrant$` means this
+command is executed in teh vagrant shell
+
+```bash
+vagrant$ ENV3
+vagrant$ python --version
+vagrant$ ENV2
+vagrant$ python --version
+``
+
