@@ -1,8 +1,8 @@
 image:
-	docker build -t cloudmesh/book:1.0 . 
+	docker build -t cloudmesh/pyenv:1.0 . 
 
 shell:
-	docker run --rm -it cloudmesh/book:1.0  /bin/bash 
+	docker run --rm -it cloudmesh/pyenv:1.0  /bin/bash 
 
 clean:
 	-docker kill $$(docker ps -q)
@@ -10,7 +10,7 @@ clean:
 	-docker rmi $$(docker images -q)
 
 push:
-	docker push cloudmesh/book:1.0
+	docker push cloudmesh/pyenv:1.0
 
 run:
-	docker run cloudmesh/book:1.0 /bin/sh -c "cd technologies; git pull; make"
+	docker run cloudmesh/pyenv:1.0 /bin/sh -c "which pyenv"
