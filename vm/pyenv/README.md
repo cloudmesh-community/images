@@ -7,7 +7,7 @@ vagrant
 mkdir cloudmesh-community
 cd cloudmesh-community
 wget -q https://github.com/cloudmesh-community/images.git
-de images/vm/pyenv
+cd images/vm/pyenv
 make clean
 make image
 make deploy
