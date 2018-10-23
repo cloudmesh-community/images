@@ -3,7 +3,7 @@
 # yesterday, so if pyenv is already in there you can not cincatenate
 
 
-RUN wget -q https://raw.githubusercontent.com/cloudmesh-community/images/master/pyenv/bash_rc_add.sh
+wget -q https://raw.githubusercontent.com/cloudmesh-community/images/master/pyenv/bash_rc_add.sh
 curl -q -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 
 #
