@@ -13,7 +13,8 @@ echo 'export PYENV_ROOT=$HOME/.pyenv' >> ~/.bashrc
 echo 'export PATH=$PYENV_ROOT/bin:$PATH' >> ~/.bashrc
 cat bash_rc_add.sh >>  ~/.bashrc
 
-source ~/.bashrc
+PYENV_ROOT=$HOME/.pyenv
+PATH=$PYENV_ROOT/bin:$PATH
 
 pyenv update
 pyenv install 3.7.1
