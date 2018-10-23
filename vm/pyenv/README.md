@@ -7,7 +7,7 @@ ENV2
 
 # BUG:
 
-
+```
 ast 10 log lines:
 checking MACHDEP... linux2
 checking EXTRAPLATDIR... 
@@ -23,4 +23,4 @@ pyenv-virtualenv: `2.7.15' is not installed in pyenv.
 pyenv-virtualenv: `3.7.1' is not installed in pyenv.
 Connection to 127.0.0.1 closed.
 
-
+```
