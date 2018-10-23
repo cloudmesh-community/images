@@ -27,5 +27,11 @@ vagrant$ ENV3
 vagrant$ python --version
 vagrant$ ENV2
 vagrant$ python --version
-``
+```
+
+# Using ubuntu desktop version (with GUI)
+
+The scripts above use the ubuntu server version which does
+not have a GUI. If you prefer to use the GUI version of ubuntu 
+please follow instructions in <https://github.com/cloudmesh-community/images/tree/master/vm/pyenv_desktop>
 
