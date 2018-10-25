@@ -1,8 +1,10 @@
+VERSION=18.10
+
 image:
-	docker build -t cloudmesh/ubuntu:18.10 . 
+	docker build -t cloudmesh/ubuntu:$(VERSION) . 
 
 shell:
-	docker run --rm -it cloudmesh/ubuntu:18.10  /bin/bash 
+	docker run --rm -it cloudmesh/ubuntu:$(VERSION)  /bin/bash 
 
 clean:
 	-docker kill $$(docker ps -q)
@@ -10,7 +12,7 @@ clean:
 	-docker rmi $$(docker images -q)
 
 push:
-	docker push cloudmesh/ubuntu:18.10
+	docker push cloudmesh/ubuntu:$(VERSION)
 
 run:
-	docker run cloudmesh/ubuntu:18.10 /bin/sh -c "cd technologies; git pull; make"
+	docker run cloudmesh/ubuntu:$(VERSION) /bin/sh -c "cd technologies; git pull; make"
