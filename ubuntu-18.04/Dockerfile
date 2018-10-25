@@ -71,3 +71,11 @@ RUN npm install -g pandoc-index
 
 RUN git clone https://github.com/cloudmesh-community/book.git
 RUN cd book; pip install -r requirements.txt
+
+ENV HOME /root
+
+RUN apt -y remove golang
+RUN apt-get -y install golang
+
+ENV GOPATH $HOME/go
+#ENV PATH "$PATH:$GOPATH/bin"

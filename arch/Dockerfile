@@ -48,4 +48,3 @@ RUN dpkg -i pandoc-2.3.1-1-amd64.deb
 RUN pip install pandoc-fignos
 RUN npm install -g pandoc-index
 
-
